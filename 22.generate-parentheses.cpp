@@ -38,6 +38,8 @@ public:
     }
     // T: O(4^n/sqrt(n)) S: O(n)
     // 组合数量是Catalan数，约为4^n/(n*sqrt(n))，每个组合遍历n个数，相乘得到时间复杂度
+    // Catalan数的递推式为：
+    // H(n) = H(0)*H(n-1) + H(1)*H(n-2) + ... + H(n-1)*H(0)，其中H(0) = H(1) = 1
     void backtracking(vector<string>* res, int n) {
         backtracking(res, "", n, n);
     }

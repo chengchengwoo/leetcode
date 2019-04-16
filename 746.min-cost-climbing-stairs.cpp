@@ -52,7 +52,7 @@ public:
     }
     // T: O(n) S: O(n)
     int DP(vector<int>& cost) {
-        // 从i位置出发的cost
+        // 到达i位置的cost
         vector<int> dp(cost.size());
         dp[0] = cost[0];
         dp[1] = cost[1];

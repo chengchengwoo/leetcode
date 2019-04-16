@@ -50,6 +50,7 @@ public:
         return -1;
     }
     // T: O(n) S: O(1)
+    // 使用摩尔投票法
     int mooreVote(vector<int>& nums) {
         int num = nums[0];
         int count = 1;

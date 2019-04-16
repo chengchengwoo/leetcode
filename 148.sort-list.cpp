@@ -82,8 +82,10 @@ public:
         ListNode* l1 = mergeSortRecursive(slow->next);
         slow->next = nullptr;
         ListNode* l2 = mergeSortRecursive(head);
-        return mergeTwoSortedList(l1, l2);
+        // l2为前半段，l1为后半段，则第一个参数为l2，以保证排序稳定性
+        return mergeTwoSortedList(l2, l1);
     }
+    // l1为前半段，l2为后半段
     ListNode* mergeTwoSortedList(ListNode* l1, ListNode* l2) {
         ListNode dummy(0);
         ListNode* p = &dummy;

@@ -59,6 +59,10 @@ public:
         return res;
     }
     // T: O(n^2) S: O(1)
+    // 1. 先将nums排序
+    // 2. 从大到小遍历，锁定其中一个数，
+    // 3. 然后在该数左侧区间使用首尾使用指针找到另外两个数
+    // 注意：每次找到一个数之后，都需要跳过重复的数
     vector<vector<int>> doublePointers(vector<int>& nums) {
         sort(nums.begin(), nums.end());
         vector<vector<int>> res;

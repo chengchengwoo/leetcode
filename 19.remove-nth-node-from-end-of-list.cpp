@@ -64,6 +64,10 @@ public:
         return head;
     }
     // T: O(n) S: O(1)
+    // 1. 使用dummy节点，统一头节点及后续节点逻辑
+    // 2. 定义快慢指针，快指针先移动n步
+    // 3. 然后快慢指针一起移动，直到快指针到末尾 
+    // 4. 删除慢指针的next
     ListNode* onePass(ListNode* head, int n) {
         ListNode dummy(0);
         dummy.next = head;

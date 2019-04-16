@@ -30,6 +30,7 @@ class Solution {
 public:
     // T: O(n) S: O(n)
     string reverseWords(string s) {
+        // 注意串结尾也需要处理
         for (int i = 0, j = 0; i <= s.size(); ++i) {
             if (i == s.size() || s[i] == ' ') {
                 for (int m = j, n = i - 1; m < n; ++m, --n) {

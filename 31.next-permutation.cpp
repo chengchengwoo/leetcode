@@ -34,14 +34,14 @@ public:
         if (nums.size() < 2) {
             return;
         }
-        // 从右往左找到第一个非递增的元素位置p
+        // 从右往左找到第一个递减的元素位置p
         int p = nums.size() - 2;
         for (; p >= 0; --p) {
             if (nums[p] < nums[p + 1]) {
                 break;
             }
         }
-        // 如果存在该元素，则在从右往左的递增元素中找到第一个大于该元素的元素，并交换
+        // 如果存在该元素，则在从右往左的非递减元素中找到第一个大于该元素的元素，并交换
         if (p >= 0) {
             for (int i = nums.size() - 1; i > p; --i) {
                 if (nums[i] > nums[p]) {

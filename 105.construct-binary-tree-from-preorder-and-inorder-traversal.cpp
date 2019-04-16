@@ -51,6 +51,9 @@ public:
         return buildTree(preorder, 0, preorder.size() - 1, inorderIndex, 0);
     }
     // T: O(n) S: O(n)
+    // 1. 根据Inorder构建map，查找root节点，得到子树的Inorder，及子树大小
+    // 2. Preorder首个元素作为root，根据子树大小，得到子树的Preorder
+    // 3. 使用子树的Inorder及Preorder递归处理
     TreeNode* buildTree(vector<int>& preorder, int preorderBegin,
         int preorderEnd, unordered_map<int, int>& inorderIndex, int inorderBegin) {
         if (preorder.empty() || (preorderBegin > preorderEnd)) return nullptr;

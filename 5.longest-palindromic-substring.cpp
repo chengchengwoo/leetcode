@@ -54,7 +54,7 @@ public:
     int expand(const string& s, int i, int j) {
         for (; i >= 0 && j < s.size() && s[i] == s[j]; --i, ++j);
         // (j - 1) - (i + 1) + 1
-        return j - i -1;
+        return j - i - 1;
     }
     // TODO(add DP solution)
 };

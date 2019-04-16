@@ -70,6 +70,7 @@ public:
         }
     }
     // T: O(n) S: O(n)
+    // BFS，使用一个队列实现
     vector<vector<int>> levelOrderIteratively(TreeNode* root) {
         vector<vector<int>> res;
         if (!root) {
@@ -87,6 +88,7 @@ public:
                 if (s->left) q.push(s->left);
                 if (s->right) q.push(s->right);
             }
+            // 转移语义，提升性能
             res.emplace_back(nodes);
         }
 

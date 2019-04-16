@@ -48,6 +48,8 @@
 class Solution {
 public:
     // T: O(n) S: O(n)
+    // 1. BFS
+    // 2. reverse
     vector<vector<int>> levelOrderBottom(TreeNode* root) {
         vector<vector<int>> res;
         if (!root) {

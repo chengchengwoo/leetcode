@@ -86,6 +86,7 @@ public:
             prev = cur;
             cur = next;
         }
+        // 注意：奇数长度时，需要右移一位
         if (len % 2 == 1) {
             cur = cur->next;
         }

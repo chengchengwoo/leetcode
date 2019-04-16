@@ -52,6 +52,7 @@ public:
         return std::max(maxDepthRecursively(root->left), maxDepthRecursively(root->right)) + 1;
     }
     // T: O(n) S: O(n)
+    // BFS，使用queue实现
     int maxDepthIteratively(TreeNode* root) {
         if (!root) return 0;
 

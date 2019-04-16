@@ -68,9 +68,11 @@ public:
         }
         TreeNode* left = lowestCommonAncestor(root->left, p, q);
         TreeNode* right = lowestCommonAncestor(root->right, p, q);
+        // 如果left和right都有p或q，则root为最近祖先
         if (left && right) {
             return root;
         }
+        // 向上返回结果
         return left ? left : right;
     }
 };

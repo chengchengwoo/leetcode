@@ -50,6 +50,8 @@ public:
         return sortedArrayToBSTIterative(nums);
     }
     // T: O(n) S: O(logn)
+    // 1. 中间元素作为root，左边为左子树，右边为右子树
+    // 2. 对子树递归处理
     TreeNode* sortedArrayToBSTRecursive(vector<int>& nums, int begin, int end) {
         if (begin > end) return nullptr;
 

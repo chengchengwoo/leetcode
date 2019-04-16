@@ -75,6 +75,8 @@ public:
         return max(getHeight(root->left), getHeight(root->right)) + 1;
     }
     // T: O(n) S: O(n)
+    // 1. 在从底向上计算高度的同时，校验left, right的高度差是否大于1
+    // 2. 如果大于1，则直接返回false
     bool isBalancedBottomUp(TreeNode* root) {
         return getHeightCheck(root) != -1;
     }

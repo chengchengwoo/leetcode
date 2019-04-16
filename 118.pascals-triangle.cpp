@@ -36,6 +36,8 @@
 class Solution {
 public:
     // T: O(n * n) S: O(1)
+    // 1. 遍历每一行，将该行都填充为1
+    // 2. 将该行除首尾外的元素，使用前一行对应元素求和填充
     vector<vector<int>> generate(int numRows) {
         vector<vector<int>> res;
         if (numRows <= 0) return res;

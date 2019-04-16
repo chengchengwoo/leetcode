@@ -47,7 +47,7 @@ public:
         return minDepthIteratively(root);
     }
 
-    // recursively, T: O(n) S: O(n)
+    // T: O(n) S: O(n)
     int minDepthRecursively(TreeNode* root) {
         if (!root) return 0;
         if (!root->left && !root->right) return 1;
@@ -55,7 +55,8 @@ public:
         if (!root->left && root->right) return minDepthRecursively(root->right) + 1;
         return std::min(minDepthRecursively(root->left), minDepthRecursively(root->right)) + 1;
     }
-    // iteratively, T: O(n) S: O(n)
+    // T: O(n) S: O(n)
+    // BFS，遍历到第一个叶子时，返回depth
     int minDepthIteratively(TreeNode* root) {
         if (!root) return 0;
         
